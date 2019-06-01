@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+      "module": "commonjs",
+      // 为了使用原生的 Async/Await，我们将编译的目标版本设置为 es2017
+      "target": "es2017",
+      "noImplicitAny": true,
+      "moduleResolution": "node",
+      "sourceMap": true,
+      "outDir": "dist",  // TS文件编译后会放入到此文件夹内
+      "baseUrl": ".",
+      "paths": {
+          "*": [
+              "node_modules/*",
+              "src/types/*"
+          ]
+      }
+  },
+  "include": [
+      "./**/*"
+  ]
+}
