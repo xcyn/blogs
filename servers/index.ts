@@ -1,4 +1,10 @@
 import * as Koa from 'koa';
+// 接入监控
+if (process.env.NODE_ENV === "development")
+{
+     const easyMonitor = require("easy-monitor");
+     easyMonitor("love_bhs");
+}
 // 定义全局路径
 declare var global: any;
 global.APP_PATH = __dirname

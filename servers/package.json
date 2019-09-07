@@ -4,8 +4,8 @@
   "description": "后端",
   "main": "index.js",
   "scripts": {
-    "start": "tsc && node dist/index.js",
-    "serve": "nodemon --watch './**/*' -e ts,tsx --exec 'ts-node' ./index.ts"
+    "start": "tsc && cross-env NODE_ENV=development node dist/index.js",
+    "serve": "cross-env NODE_ENV=development nodemon --watch './**/*' -e ts,tsx --exec 'ts-node' ./index.ts"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,8 @@
   "dependencies": {
     "axios": "^0.18.0",
     "dayjs": "^1.8.16",
+    "easy-monitor": "^2.2.7",
+    "cross-env": "^5.2.0",
     "koa": "^2.7.0",
     "koa-body": "^4.1.0",
     "koa-bodyparser": "^4.2.1",
