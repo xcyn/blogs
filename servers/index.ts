@@ -5,11 +5,11 @@ const app = new Koa();
 const router = new Router();
 
 router.get('/*', async (ctx) => {
-    ctx.body = '路由启动...';
+    ctx.body = '路由完毕...';
 });
 
 app.use(router.routes());
 
-app.listen(3000);
+app.listen(3099);
 
-console.log('Server running on port 3000');
+console.log('Server running on port 3099');
