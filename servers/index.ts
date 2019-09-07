@@ -1,14 +1,14 @@
 import * as Koa from 'koa';
-import * as Router from 'koa-router';
+var appRoute = require('./routes')
+// 定义全局路径
+declare var global: any;
+global.APP_PATH = __dirname
 
 const app = new Koa();
-const router = new Router();
 
-router.get('/*', async (ctx) => {
-    ctx.body = '路由完毕...';
-});
-
-app.use(router.routes());
+// 路由中间件
+app.use(appRoute.routes())
+app.use(appRoute.allowedMethods());
 
 app.listen(3099);
 
