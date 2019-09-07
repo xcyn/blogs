@@ -1,12 +1,15 @@
 import * as Koa from 'koa';
-var appRoute = require('./routes')
 // 定义全局路径
 declare var global: any;
 global.APP_PATH = __dirname
+// 中间件
+var log = require('./middleware/log');
+const koaBody = require('koa-body')
+const appRoute = require('./routes')
 
 const app = new Koa();
-
-// 路由中间件
+app.use(log)
+app.use(koaBody({"multipart": true}))
 app.use(appRoute.routes())
 app.use(appRoute.allowedMethods());
 
