@@ -4,9 +4,9 @@
 - 技术栈：
     - 服务端：Nodejs，框架Koa2
     - 前端和后台模板：Vue.js
-    - 数据库：MySQL
+    - 数据库：MongoDB
     - 部署：pm2
-    - 完整包含技术：Node.js, typeScript, Koa2, MySQL, Sequelize, Vue.js, pm2
+    - 完整包含技术：Node.js, typeScript, Koa2, MongoDB, Mongoose, Vue.js, pm2
 - 参考资料：
     - client
     - Vue全家桶+TypeScript：<a href="https://www.jianshu.com/p/6c064270691f">总结参考</a>
@@ -16,4 +16,10 @@
     - tslint配置：<a href="https://mssn.midea.com/ask/?/article/244">总结参考</a>
     - pm2配置：<a href="https://www.jianshu.com/p/70ced477e5bd">总结参考</a>
     - 日志配置: <a href="https://github.com/log4js-node/log4js-node">总结参考</a>
-    - 性能监控: <a href="https://github.com/log4js-node/log4js-node">总结参考</a>
+    - 性能监控: <a href="https://www.cnblogs.com/fundebug/p/8633211.html">总结参考</a>
+    - Sequelize: <a href="https://www.jianshu.com/p/c148a3e9e39b">总结参考</a>
+    - Mongoose: <a href="https://www.jianshu.com/p/c148a3e9e39b">总结参考</a>
+    - 安装Mongoose: <a href="https://www.runoob.com/mongodb/mongodb-osx-install.html">总结参考</a>
+    - 破解版客户端: <a href="https://xclient.info/s/navicat-for-mongodb.html">总结参考</a>
+    - Mongodb安装和配置: <a href="https://www.jianshu.com/p/f905a9a7fa1f">总结参考</a>
+    - 无法修改vim解决方案: <a href="https://www.jianshu.com/p/fd02aed430fd">总结参考</a>
