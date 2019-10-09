@@ -23,3 +23,14 @@
     - 破解版客户端: <a href="https://xclient.info/s/navicat-for-mongodb.html">总结参考</a>
     - Mongodb安装和配置: <a href="https://www.jianshu.com/p/f905a9a7fa1f">总结参考</a>
     - 无法修改vim解决方案: <a href="https://www.jianshu.com/p/fd02aed430fd">总结参考</a>
+    - Nodejs使用mongoose1: <a href="https://segmentfault.com/a/1190000008245062">总结参考</a>
+    - mongoose参考配置: <a href="https://www.jianshu.com/p/210d3f55af17">总结参考</a>
+    - 部署
+    - 腾讯云购买地址: <a href="https://cloud.tencent.com/act/seckill?from=11091">总结参考</a>
+    - linux下安装 node: <a href="https://www.jianshu.com/p/8cdbe4f4b533">总结参考</a>
+    - 怎样将本地web项目部署到腾讯云服务器上?: <a href="https://www.jianshu.com/p/910eda312de7">总结参考</a>
+    - 如果在linux下部署web服务: <a href="https://blog.csdn.net/zhydream77/article/details/79683912">总结参考</a>
+- 踩坑记录：
+    - 配置mongoose回调不执行问题: <a href="https://blog.csdn.net/moumaobuchiyu/article/details/54884916">总结参考</a>
+    
+
