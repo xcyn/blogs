@@ -1,4 +1,8 @@
 import * as Koa from 'koa';
+const chalk = require('chalk');
+var session = require('express-session');
+var MongoStore = require('connect-mongo')(session);
+let mongodbConfig = require('./mongodb/index');
 // 接入监控
 if (process.env.NODE_ENV === "development")
 {
@@ -16,9 +20,21 @@ const appRoute = require('./routes')
 const app = new Koa();
 app.use(log)
 app.use(koaBody({"multipart": true}))
+// 链接数据库
+app.use(async(ctx: any, next: any)=> {
+     session({
+          secret: 'sessiontest',
+          resave: true,
+          saveUninitalized: true,
+          store: new MongoStore({
+              url: mongodbConfig.getMongoUri()
+          })
+      })
+      await next()
+});
 app.use(appRoute.routes())
 app.use(appRoute.allowedMethods());
 
-app.listen(3099);
-
-console.log('Server running on port 3099');
+app.listen(3099,() => {
+     chalk.green('Server running on port 3099');
+});
