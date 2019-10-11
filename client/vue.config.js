@@ -1,5 +1,8 @@
 /* eslint-disable*/
 const path = require('path');
+const routerBase = process.env.VUE_APP_ROUTER_BASE;
+console.log('routerBase', routerBase)
+
 module.exports = {
   productionSourceMap: false,
   publicPath: './',
@@ -37,10 +40,10 @@ module.exports = {
     port: 4000,
     disableHostCheck: true,
     proxy: {
-      '/api': {
-        target: `http://test153.suanshubang.com`,
+      routerBase: {
+        target: `0.0.0.0`,
         changeOrigin: true,
-        pathRewrite: { '/api': '' },
+        pathRewrite: { '^/loveBhs': '/' },
       },
     },
   },

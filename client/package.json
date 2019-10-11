@@ -9,12 +9,21 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "axios": "^0.19.0",
     "core-js": "^2.6.5",
+    "dayjs": "^1.8.15",
+    "normalize.css": "^8.0.1",
+    "qs": "^6.9.0",
+    "vconsole": "^3.3.2",
     "vue": "^2.6.10",
     "vue-class-component": "^7.1.0",
-    "vue-property-decorator": "^8.1.1"
+    "vue-property-decorator": "^8.1.1",
+    "vue-router": "^3.0.2",
+    "vue-tsx-support": "^2.3.0"
   },
   "devDependencies": {
+    "@types/qs": "^6.5.3",
+    "@types/axios": "^0.14.0",
     "@vue/cli-plugin-babel": "^3.8.0",
     "@vue/cli-plugin-eslint": "^3.8.0",
     "@vue/cli-plugin-typescript": "^3.8.1",
@@ -22,8 +31,12 @@
     "@vue/eslint-config-typescript": "^4.0.0",
     "babel-eslint": "^10.0.1",
     "cache-loader": "^3.0.1",
+    "css-loader": "^3.2.0",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "style-loader": "^1.0.0",
+    "stylus": "^0.54.7",
+    "stylus-loader": "^3.0.2",
     "thread-loader": "^2.1.2",
     "ts-loader": "^6.0.2",
     "tslint": "^5.17.0",
