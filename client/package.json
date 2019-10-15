@@ -9,11 +9,15 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@tweenjs/tween.js": "^18.3.1",
+    "@types/tween.js": "^17.2.0",
     "axios": "^0.19.0",
     "core-js": "^2.6.5",
     "dayjs": "^1.8.15",
     "normalize.css": "^8.0.1",
     "qs": "^6.9.0",
+    "three": "^0.109.0",
+    "tween.js": "^16.6.0",
     "vconsole": "^3.3.2",
     "vue": "^2.6.10",
     "vue-class-component": "^7.1.0",
