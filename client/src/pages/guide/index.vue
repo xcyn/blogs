@@ -153,7 +153,7 @@ export default class Guide extends VueComponent<{}> {
                 clearInterval(inTimer)
                 this.showInfo = false;
                 this.infinite()
-            },2000);
+            },3000);
         },0);
     }
 
@@ -283,6 +283,7 @@ export default class Guide extends VueComponent<{}> {
     justify-content center
 .info_my_img
     width 60px
+    height 100%
     padding 5px
     border-radius 5px
     box-shadow 0 0 10px 0 #888

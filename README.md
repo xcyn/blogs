@@ -31,6 +31,7 @@
     - linux下安装 node: <a href="https://www.jianshu.com/p/8cdbe4f4b533">总结参考</a>
     - 怎样将本地web项目部署到腾讯云服务器上?: <a href="https://www.jianshu.com/p/910eda312de7">总结参考</a>
     - 如果在linux下部署web服务: <a href="https://blog.csdn.net/zhydream77/article/details/79683912">总结参考</a>
+    - 域名解析: <a href="https://jingyan.baidu.com/article/0bc808fc2c6a851bd485b92a.html">总结参考</a>
 - 踩坑记录：
     - 配置mongoose回调不执行问题: <a href="https://blog.csdn.net/moumaobuchiyu/article/details/54884916">总结参考</a>
     
