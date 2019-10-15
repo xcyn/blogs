@@ -15,7 +15,7 @@ const defaultPage = {
 }
 
 const router = new VueRouter({
-  mode: 'history',
+  // mode: 'history',
   base: '/',
   routes: [
     {
