@@ -7,6 +7,7 @@
     - 数据库：MongoDB
     - 部署：pm2
     - 完整包含技术：Node.js, typeScript, Koa2, MongoDB, Mongoose, Vue.js, pm2
+- 网站链接：<a href="http://lovebhs.xyz/guide">地址</a>
 - 参考资料：
     - client
     - Vue全家桶+TypeScript：<a href="https://www.jianshu.com/p/6c064270691f">总结参考</a>
