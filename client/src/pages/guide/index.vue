@@ -26,39 +26,54 @@ export default class Guide extends VueComponent<{}> {
     @Provide() targets: any = { sphere: [] }
     @Provide() showInfoConfig: guideInterFace[] = [
         {
-            img: require('@/assets/guide/guide1.jpeg'),
-            nickname: '我要和你结婚❤️',
-            id: '2020520',
-            vote: '说好要相守50年哟～',
-            intro: '2020年5月20号这个特殊的日子我们领证～'
+            img: 'https://i.niupic.com/images/2019/11/03/_5.jpeg',
+            nickname: '我是熊川宇',
+            id: '你好未来',
+            vote: '未来可期，性感乐观',
+            intro: '无论未来如何，不用焦虑悲观，努力就好，干就完了～'
         },
         {
-            img: require('@/assets/guide/guide2.jpeg'),
-            nickname: '相遇的日子😄',
-            id: '20180405',
-            vote: '一首《慢慢》征服你',
-            intro: '感谢嫂嫂和苗哥让我们相遇，清明节约会，我们也是没谁了😂'
+            img: 'https://i.niupic.com/images/2019/11/03/_2.jpeg',
+            nickname: '高思的日子👨‍🎓',
+            id: '201605-201805',
+            vote: '成长的开始-轻松的团队氛围',
+            intro: '让人尊敬的领导团队'
         },
         {
-            img: require('@/assets/guide/guide3.jpeg'),
-            nickname: '南京的日子🏠',
-            id: '20181001',
-            vote: '国庆节南京看房',
-            intro: '已经约定终身，所以决定在你想去的城市买房🌹'
+            img: 'https://i.niupic.com/images/2019/11/03/_3.jpeg',
+            nickname: '滴滴的日子🚗',
+            id: '201805-201905',
+            vote: '飞速成长的-在优秀的团队中成长',
+            intro: '遇到最好的领导强哥，开始执着对业务和团队的思考'
         },
         {
-            img: require('@/assets/guide/guide4.jpeg'),
-            nickname: '回家见爸妈😊',
-            id: '20191001',
-            vote: '吃延吉美食',
-            intro: '你个心机girl,说好来延吉吃好吃的，结果自己都不怎么吃，害得我胖5斤😣'
+            img: 'https://i.niupic.com/images/2019/11/03/_4.jpeg',
+            nickname: '作业帮🏫',
+            id: '201905-至今',
+            vote: '成长飞速-在更高的岗位成长',
+            intro: '有幸开始带小团队一起进步，在更高的纬度要求自己'
         }
     ]
 
     // 生成虚拟数据
     initPersonArrays() {
         for(var i=0;i<199;i++){
-            const image =this.showInfoConfig[i%4].img
+            let images = [
+                'https://i.niupic.com/images/2019/11/03/_1.jpeg',
+                'https://i.niupic.com/images/2019/11/03/_2.jpeg',
+                'https://i.niupic.com/images/2019/11/03/_3.jpeg',
+                'https://i.niupic.com/images/2019/11/03/_4.jpeg',
+                'https://i.niupic.com/images/2019/11/03/_5.jpeg',
+                'https://i.niupic.com/images/2019/11/03/_6.jpeg',
+                'https://i.niupic.com/images/2019/11/03/_7.jpeg',
+                'https://i.niupic.com/images/2019/11/03/_8.jpeg',
+                'https://i.niupic.com/images/2019/11/03/_9.jpeg',
+                'https://i.niupic.com/images/2019/11/03/_10.jpeg',
+                'https://i.niupic.com/images/2019/11/03/_11.jpeg',
+                'https://i.niupic.com/images/2019/11/03/_12.jpeg',
+            ]
+
+            const image =images[i%images.length]
             this.personArray.push({
                 image
             });
@@ -182,7 +197,8 @@ export default class Guide extends VueComponent<{}> {
     render(h: any) {
         return (
             <div class="guide" style={{ height: `${this.guideH}px` }}>
-                <div class='guide-title'>JUST FOR YOU</div>
+                <div class='guide-title'>熊川宇的博客</div>
+                <div class='guide-subTitle'>写下人生百态，记录成长点滴</div>
                 <div id="container"></div>
                 <transition name="fade">
                     <div v-show={this.showInfo} class="show_info animated fadeInUp">
@@ -250,7 +266,14 @@ export default class Guide extends VueComponent<{}> {
     top 40px
     text-align center
     color #fff
-    font-size 30px
+    font-size 25px
+.guide-subTitle
+    position absolute
+    width 100%
+    top 80px
+    text-align center
+    color #fff
+    font-size 12px
 .guide
     background-color rgba(0,0,0,0.8)
     margin 0
