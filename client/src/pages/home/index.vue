@@ -130,7 +130,8 @@ export default class Guide extends VueComponent<{}> {
     // 留言表单
     submitHandler(e:any) {
       e.preventDefault()
-      const toast = this.$createToast({
+      const context:any = this
+      const toast:any = context.$createToast({
         time: 1000,
         type: 'correct',
         txt: '提交成功'
@@ -144,7 +145,8 @@ export default class Guide extends VueComponent<{}> {
       console.log('reset', e)
     }
     handleMHistory() {
-      const toast = this.$createToast({
+      const context:any = this
+      const toast:any = context.$createToast({
         time: 1000,
         txt: '功能还未开放！'
       })
