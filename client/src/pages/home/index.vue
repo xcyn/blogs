@@ -3,7 +3,6 @@
     <div slot="content">
       <div :style="{'height': `${homeH}px`}">
         <cube-scroll-nav
-          :current="current"
           class="homeNavs"
           @change="changeHandler">
           <cube-scroll-nav-panel
@@ -58,7 +57,6 @@ import { contents } from './config'
 export default class Guide extends VueComponent<{}> {
     @Provide() homeH: Number = self.innerHeight
     @Provide() datas:any =  contents;
-    @Provide() current:String =  '个人介绍';
     @Provide() valid:any = false
     @Provide() model:any =  {
       phone: '',
@@ -120,12 +118,10 @@ export default class Guide extends VueComponent<{}> {
       layout: 'standard' // classic fresh
     }
     changeHandler(label:String) {
-      this.current = label
-      console.log('changed to:', label)
+      console.log('1changed to:', label)
     }
     stickyChangeHandler(current:String) {
-      this.current = current
-      console.log('sticky-change', current)
+      console.log('1sticky-change', current)
     }
     // 留言表单
     submitHandler(e:any) {
