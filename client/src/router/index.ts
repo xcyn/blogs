@@ -20,8 +20,8 @@ const router = new VueRouter({
   routes: [
     {
       path: '/',
-      name: 'home',
-      redirect: 'home'
+      name: 'guide',
+      redirect: 'guide'
     },
     // 炫酷引导页
     {

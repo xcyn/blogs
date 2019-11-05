@@ -1,9 +1,8 @@
 <template>
   <div>
     <div slot="content">
-      <div>
+      <div :style="{'height': `${homeH}px`}">
         <cube-scroll-nav
-          :style="{'height': `${homeH}px`}"
           :current="current"
           class="homeNavs"
           @change="changeHandler">
@@ -14,7 +13,7 @@
             :label="item.name">
             <ul class="contentH">
               <li class="nav-container" :key="key" v-for="(item, key) in item.contents">
-                <div class="person-introduce">
+                <div class="person-introduce" v-if="!item.isCustom">
                   <div class="logo">
                     <img :src="item.logo">
                   </div>
@@ -22,12 +21,25 @@
                     <div :key="key" v-for="(des, key) in item.desc" class="des-item">
                       <div>
                         <div class="des-num">{{des.subT}}</div>
-                        <div class="des-content">
-                          {{des.message}}
+                        <div class="des-content" v-html="des.message">
                         </div>
                       </div>
                     </div>
                   </div>
+                </div>
+                <div
+                    v-if="item.isCustom"                
+                >
+                  <div class="form-title"><div>给我留言</div> <div class="message-history" @click="handleMHistory">留言记录</div></div>
+                  <cube-form
+                    class="cube-form"
+                    :model="model"
+                    :schema="schema"
+                    :immediate-validate="false"
+                    :options="options"
+                    @validate="validateHandler"
+                    @reset="resetHandler"></cube-form>
+                  <cube-button class="cube-submit-btn" :disabled="!valid" @click="submitHandler">提交</cube-button>
                 </div>
               </li>
             </ul>
@@ -47,6 +59,66 @@ export default class Guide extends VueComponent<{}> {
     @Provide() homeH: Number = self.innerHeight
     @Provide() datas:any =  contents;
     @Provide() current:String =  '个人介绍';
+    @Provide() valid:any = false
+    @Provide() model:any =  {
+      phone: '',
+      name: '',
+      message: '',
+    }
+    @Provide() schema:any = {
+      groups: [
+        {
+          fields: [
+            {
+              type: 'input',
+              modelKey: 'phone',
+              label: '手机号',
+              props: {
+                placeholder: '请输入您的手机号'
+              },
+              rules: {
+                required: true,
+                pattern: /^[1][3,4,5,7,8][0-9]{9}$/
+              },
+              // validating when blur
+              trigger: 'blur',
+              messages: {
+                pattern: '请输入正确手机号格式'
+              }
+            },
+            {
+              type: 'input',
+              modelKey: 'name',
+              label: '姓名',
+              props: {
+                placeholder: '请输入您的名字'
+              },
+              rules: {
+                required: true
+              },
+              // validating when blur
+              trigger: 'blur'
+            },
+            {
+              type: 'textarea',
+              modelKey: 'message',
+              label: '留言',
+              props: {
+                placeholder: '请写下您的留言'
+              },
+              rules: {
+                required: true
+              },
+              debounce: 100
+            }
+          ]
+        }
+      ]
+    }
+    @Provide() options:any = {
+      scrollToInvalidField: true,
+      layout: 'standard' // classic fresh
+    }
     changeHandler(label:String) {
       this.current = label
       console.log('changed to:', label)
@@ -54,6 +126,29 @@ export default class Guide extends VueComponent<{}> {
     stickyChangeHandler(current:String) {
       this.current = current
       console.log('sticky-change', current)
+    }
+    // 留言表单
+    submitHandler(e:any) {
+      e.preventDefault()
+      const toast = this.$createToast({
+        time: 1000,
+        type: 'correct',
+        txt: '提交成功'
+      })
+      toast.show()
+    }
+    validateHandler(result:any) {
+      this.valid = result.valid
+    }
+    resetHandler(e:any) {
+      console.log('reset', e)
+    }
+    handleMHistory() {
+      const toast = this.$createToast({
+        time: 1000,
+        txt: '功能还未开放！'
+      })
+      toast.show()
     }
     mounted() {
     }
@@ -67,8 +162,8 @@ export default class Guide extends VueComponent<{}> {
   opacity 0
 .NavHeight
   height 55px
-// .contentH
-//   height 250px
+.contentH
+  border-bottom: 1px solid #f4f4f4
 .nav-container
   padding 0 15px
 .person-introduce
@@ -97,4 +192,20 @@ export default class Guide extends VueComponent<{}> {
   display flex
   align-self center
   padding-bottom 10px
+.form-title
+  border-left 3px solid #fc9153
+  padding-left 5px
+  margin 10px 0
+  display flex
+  justify-content space-between
+.cube-submit-btn
+  margin 30px 0
+.message-history
+  padding 0 10px
+  font-size 12px
+  color #fc9153
+.cube-form /deep/ .cube-form-item
+  align-items flex-start
+.cube-form /deep/ .cube-form-label
+  padding 13px 0
 </style>
