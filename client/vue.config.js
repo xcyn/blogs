@@ -6,8 +6,16 @@ console.log('routerBase', routerBase)
 module.exports = {
   productionSourceMap: false,
   publicPath: './',
+
   css: {
+    loaderOptions: {
+      stylus: {
+        'resolve url': true,
+        'import': []
+      }
+    }
   },
+
   configureWebpack: {
     resolve: {
       extensions: ['.js', '.vue', '.json', 'ts'],
@@ -18,6 +26,7 @@ module.exports = {
     },
     devtool: process.env.NODE_ENV !== 'production' && 'source-map' 
   },
+
   chainWebpack: (config) => {
     // 官网相关配置
     config.module
@@ -32,6 +41,7 @@ module.exports = {
     config
       .plugin('fork-ts-checker')
   },
+
   devServer: {
     overlay: {
       warnings: true,
@@ -47,4 +57,11 @@ module.exports = {
       },
     },
   },
+
+  pluginOptions: {
+    'cube-ui': {
+      postCompile: false,
+      theme: false
+    }
+  }
 };

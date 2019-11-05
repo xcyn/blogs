@@ -15,4 +15,8 @@ export default class App extends Vue {}
 </script>
 
 <style>
+#app {
+  max-width: 500px;
+  margin: 0 auto
+}
 </style>

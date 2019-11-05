@@ -21,13 +21,23 @@ const router = new VueRouter({
     {
       path: '/',
       name: 'home',
-      redirect: 'guide'
+      redirect: 'home'
     },
     // 炫酷引导页
     {
       path: '/guide',
       name: 'guide',
       component: () => import('@/pages/guide/index.vue')
+    },
+    {
+      path: '/home',
+      name: 'home',
+      component: () => import('@/pages/home/index.vue')
+    },
+    {
+      path: '/syb-active',
+      name: 'syb-active',
+      component: () => import('@/pages/syb-active/index.vue')
     },
     notFound,
     defaultPage

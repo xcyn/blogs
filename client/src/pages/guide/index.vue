@@ -172,6 +172,12 @@ export default class Guide extends VueComponent<{}> {
         },0);
     }
 
+    handleGoHome() {
+        this.$router.push({
+            path: '/home'
+        })
+    }
+
     // computed
     get computedNum () {
         return this.showInfo
@@ -215,6 +221,7 @@ export default class Guide extends VueComponent<{}> {
                         <div class="intro">{this.showInfoConfig[this.num].intro}</div>
                     </div>
                 </transition>
+                <div class="goHome" onClick={this.handleGoHome.bind(this)}>去往主页</div>
             </div>
         )
     }
@@ -326,4 +333,13 @@ export default class Guide extends VueComponent<{}> {
   transition opacity .5s
 .fade-enter, .fade-leave-active
   opacity 0
+.goHome
+    position absolute
+    bottom 15px
+    right 15px
+    padding 10px
+    background-color rgba(255,255,255,0.2)
+    color #fff
+    border-radius 5px
+    font-size 13px
 </style>
