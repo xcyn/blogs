@@ -22,7 +22,7 @@
     - 性能监控: <a href="https://www.cnblogs.com/fundebug/p/8633211.html">总结参考</a>
     - Sequelize: <a href="https://www.jianshu.com/p/c148a3e9e39b">总结参考</a>
     - Mongoose: <a href="https://www.jianshu.com/p/c148a3e9e39b">总结参考</a>
-    - 安装Mongoose: <a href="https://www.runoob.com/mongodb/mongodb-osx-install.html">总结参考</a>
+    - 安装Mongoose: <a href="c">总结参考</a>
     - 破解版客户端: <a href="https://xclient.info/s/navicat-for-mongodb.html">总结参考</a>
     - Mongodb安装和配置: <a href="https://www.jianshu.com/p/f905a9a7fa1f">总结参考</a>
     - 无法修改vim解决方案: <a href="https://www.jianshu.com/p/fd02aed430fd">总结参考</a>
@@ -36,5 +36,6 @@
     - 域名解析: <a href="https://jingyan.baidu.com/article/0bc808fc2c6a851bd485b92a.html">总结参考</a>
 - 踩坑记录：
     - 配置mongoose回调不执行问题: <a href="https://blog.csdn.net/moumaobuchiyu/article/details/54884916">总结参考</a>
+    - 1、linux root下npm install 需要携带参数 --unsafe-perm 2、linux下安装g++模块yum install gcc gcc-c++
     
 
