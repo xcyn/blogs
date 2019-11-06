@@ -2,7 +2,7 @@
   "mongodb": {
     "user": "userAdmin",
     "pass": "123456",
-    "host": "localhost",
+    "host": "49.233.77.39",
     "port": "27017",
     "replicaSet": {
       "name": "",

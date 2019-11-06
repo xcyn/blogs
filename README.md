@@ -17,6 +17,7 @@
     - 使用Typescript和Koa构建Node应用：<a href="https://www.jianshu.com/p/1a91f36e5153">总结参考</a>
     - tslint配置：<a href="https://mssn.midea.com/ask/?/article/244">总结参考</a>
     - pm2配置：<a href="https://www.jianshu.com/p/70ced477e5bd">总结参考</a>
+    - linux下安装pm2：<a href="https://my.oschina.net/u/2252639/blog/1798667">总结参考</a>
     - 日志配置: <a href="https://github.com/log4js-node/log4js-node">总结参考</a>
     - 性能监控: <a href="https://www.cnblogs.com/fundebug/p/8633211.html">总结参考</a>
     - Sequelize: <a href="https://www.jianshu.com/p/c148a3e9e39b">总结参考</a>
