@@ -35,6 +35,11 @@ const router = new VueRouter({
       component: () => import('@/pages/home/index.vue')
     },
     {
+      path: '/message-history',
+      name: 'message-history',
+      component: () => import('@/pages/message-history/index.vue')
+    },
+    {
       path: '/syb-active',
       name: 'syb-active',
       component: () => import('@/pages/syb-active/index.vue')

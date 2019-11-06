@@ -29,7 +29,7 @@
                 <div
                     v-if="item.isCustom"                
                 >
-                  <div class="form-title"><div>给我留言</div> <div class="message-history" @click="handleMHistory">留言记录</div></div>
+                  <div class="form-title"><div>给我留言</div> <div class="message-history" @click="handleMHistory">留言记录({{messageNum}})</div></div>
                   <cube-form
                     class="cube-form"
                     :model="model"
@@ -37,7 +37,7 @@
                     :immediate-validate="false"
                     :options="options"
                     @validate="validateHandler"
-                    @reset="resetHandler"></cube-form>
+                    ></cube-form>
                   <cube-button class="cube-submit-btn" :disabled="!valid" @click="submitHandler">提交</cube-button>
                 </div>
               </li>
@@ -52,12 +52,14 @@
 import { Component, Provide, Watch } from 'vue-property-decorator'
 import { Component as VueComponent } from 'vue-tsx-support'
 import { contents } from './config'
+import request from '../../common/request'
 
 @Component
 export default class Guide extends VueComponent<{}> {
     @Provide() homeH: Number = self.innerHeight
     @Provide() datas:any =  contents;
     @Provide() valid:any = false
+    @Provide() messageNum:Number = 0
     @Provide() model:any =  {
       phone: '',
       name: '',
@@ -102,12 +104,13 @@ export default class Guide extends VueComponent<{}> {
               modelKey: 'message',
               label: '留言',
               props: {
-                placeholder: '请写下您的留言'
+                placeholder: '请写下您的留言',
+                maxlength: 200
               },
               rules: {
                 required: true
               },
-              debounce: 100
+              debounce: 200
             }
           ]
         }
@@ -123,32 +126,55 @@ export default class Guide extends VueComponent<{}> {
     stickyChangeHandler(current:String) {
       console.log('1sticky-change', current)
     }
+    async getMessageList() {
+      const res = await request({
+        url: 'http://127.0.0.1:3099/personal/message/get',
+        method: 'get'
+      })
+      this.messageNum = res.data.length
+    }
     // 留言表单
-    submitHandler(e:any) {
+    async submitHandler(e:any) {
       e.preventDefault()
       const context:any = this
-      const toast:any = context.$createToast({
-        time: 1000,
-        type: 'correct',
-        txt: '提交成功'
+      console.log('this.model', this.model)
+      const res = await request({
+        url: 'http://127.0.0.1:3099/personal/message/save',
+        method: 'post',
+        params: this.model
       })
-      toast.show()
+      if(res.errno === 200) {
+        const toast:any = context.$createToast({
+          time: 1000,
+          type: 'correct',
+          txt: '提交成功'
+        })
+        toast.show()
+      } else {
+        const errnoToast:any = context.$createToast({
+          time: 1000,
+          type: 'error',
+          txt: res.errmsg
+        })
+        errnoToast.show()
+      }
+
+      this.getMessageList()
     }
     validateHandler(result:any) {
+      console.log('111', result.valid)
       this.valid = result.valid
     }
     resetHandler(e:any) {
       console.log('reset', e)
     }
     handleMHistory() {
-      const context:any = this
-      const toast:any = context.$createToast({
-        time: 1000,
-        txt: '功能还未开放！'
+      this.$router.push({
+        path: '/message-history'
       })
-      toast.show()
     }
     mounted() {
+      this.getMessageList()
     }
 }
 </script>
