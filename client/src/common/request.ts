@@ -13,7 +13,6 @@ const request = function (option: any) {
 
   let sendUrl = process.env.VUE_APP_BASE_API + option.url
   var params:string = ''
-
   let method = option.method.toLocaleLowerCase()
   if (option.method === 'get') {
     params = qs.stringify(option.params)
@@ -24,7 +23,6 @@ const request = function (option: any) {
       'Content-Type': 'application/json;charset=UTF-8'
     }
   }
-  console.log('option.headers', option.headers, option.params)
   return axios({
     method,
     url: sendUrl,

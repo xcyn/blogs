@@ -128,7 +128,7 @@ export default class Guide extends VueComponent<{}> {
     }
     async getMessageList() {
       const res = await request({
-        url: 'http://127.0.0.1:3099/personal/message/get',
+        url: '/personal/message/get',
         method: 'get'
       })
       this.messageNum = res.data.length
@@ -139,7 +139,7 @@ export default class Guide extends VueComponent<{}> {
       const context:any = this
       console.log('this.model', this.model)
       const res = await request({
-        url: 'http://127.0.0.1:3099/personal/message/save',
+        url: '/personal/message/save',
         method: 'post',
         params: this.model
       })
@@ -162,7 +162,6 @@ export default class Guide extends VueComponent<{}> {
       this.getMessageList()
     }
     validateHandler(result:any) {
-      console.log('111', result.valid)
       this.valid = result.valid
     }
     resetHandler(e:any) {

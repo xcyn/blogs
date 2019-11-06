@@ -21,7 +21,7 @@ export default class Guide extends VueComponent<{}> {
     @Provide() messageList: any = []
     async getMessageList() {
       const res = await request({
-        url: 'http://127.0.0.1:3099/personal/message/get',
+        url: '/personal/message/get',
         method: 'get'
       })
       this.messageList = res.data
