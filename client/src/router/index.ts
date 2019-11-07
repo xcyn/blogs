@@ -20,15 +20,15 @@ const router = new VueRouter({
   routes: [
     {
       path: '/',
-      name: 'guide',
-      redirect: 'guide'
+      name: 'home',
+      redirect: 'home'
     },
     // 炫酷引导页
-    {
-      path: '/guide',
-      name: 'guide',
-      component: () => import('@/pages/guide/index.vue')
-    },
+    // {
+    //   path: '/guide',
+    //   name: 'guide',
+    //   component: () => import('@/pages/guide/index.vue')
+    // },
     {
       path: '/home',
       name: 'home',
