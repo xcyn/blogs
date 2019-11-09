@@ -6,7 +6,11 @@ var appRouter = new Router();
 var home = require('./controller/home/router')
 // 个人博客
 var personal = require('./controller/personal/router')
-appRouter.use('/home', home)
+// 微信
+var weixin = require('./controller/weixin/router')
+// 微信接口配置信息
+appRouter.use('/weixin', weixin)
+// appRouter.use('/home', home)
 appRouter.use('/personal', personal)
 
 module.exports = appRouter

@@ -1,5 +1,6 @@
 let mongoose = require('mongoose');
-let mongodbConfig = require('config').get('mongodb');
+let isdev = process.env.NODE_ENV === 'development'
+let mongodbConfig = isdev ? require('config').get('mongodb_dev') : require('config').get('mongodb');
 
 /**
  * debug 模式
