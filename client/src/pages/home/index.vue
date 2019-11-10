@@ -52,6 +52,7 @@
 import { Component, Provide, Watch } from 'vue-property-decorator'
 import { Component as VueComponent } from 'vue-tsx-support'
 import { contents } from './config'
+import wxShare from '../../common/wxShare'
 import request from '../../common/request'
 
 @Component
@@ -172,7 +173,12 @@ export default class Guide extends VueComponent<{}> {
         path: '/message-history'
       })
     }
-    mounted() {
+    async mounted() {
+      await wxShare({
+        title: '我的博客',
+        desc: '个人介绍及个人履历',
+        imgUrl: 'https://i.niupic.com/images/2019/11/05/_4.jpeg'
+      })
       this.getMessageList()
     }
 }

@@ -16,7 +16,7 @@ const request = function (option: any) {
   let method = option.method.toLocaleLowerCase()
   if (option.method === 'get') {
     params = qs.stringify(option.params)
-    sendUrl += '?' + option.params
+    sendUrl += '?' + params
   }
   if(!option.headers) {
     option.headers = {

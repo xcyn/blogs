@@ -59,7 +59,10 @@ appRouter.get('/weixinShare', async (ctx: any) => {
     ctx.body = {
       errno: 200,
       errmsg: '签名成功',
-      data: res
+      data: {
+        ...res,
+        appid: weixinConfig.appid
+      }
     }
   } catch(err) {
     ctx.body = {
