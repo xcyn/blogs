@@ -23,6 +23,7 @@
     "config": "^3.2.3",
     "connect-mongo": "^3.0.0",
     "cross-env": "^5.2.0",
+    "crypto": "^1.0.1",
     "dayjs": "^1.8.16",
     "easy-monitor": "^2.2.7",
     "express-session": "^1.16.2",

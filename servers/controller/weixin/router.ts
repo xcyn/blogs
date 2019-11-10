@@ -53,9 +53,9 @@ appRouter.get('/weixinShare', async (ctx: any) => {
         type: 'jsapi'
       }
     })).data
-    cacheData.ticket = ticket
+    cacheData.ticket = ticket.ticket
     // 签名
-    const res = signUtils(ticket, ctx.request.query.url)
+    const res = signUtils(ticket.ticket, ctx.request.query.url)
     ctx.body = {
       errno: 200,
       errmsg: '签名成功',
