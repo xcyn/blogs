@@ -33,7 +33,7 @@ export const contents = [
     "name": "我的履历",
     "contents": [
       {
-        'logo': 'http://chuantu.xyz/t6/703/1572955667x3661913030.png',
+        'logo': 'https://i.niupic.com/images/2019/11/10/_58.png',
         'desc': [
           {
             'subT': '工作时间:',
@@ -54,7 +54,7 @@ export const contents = [
         ]
       },
       {
-        'logo': 'http://chuantu.xyz/t6/703/1572955215x3661913030.png',
+        'logo': 'https://i.niupic.com/images/2019/11/10/_57.png',
         'desc': [
           {
             'subT': '工作时间:',
@@ -75,7 +75,7 @@ export const contents = [
         ]
       },
       {
-        'logo': 'http://chuantu.xyz/t6/703/1572954672x3703728804.png',
+        'logo': 'https://i.niupic.com/images/2019/11/10/_56.png',
         'desc': [
           {
             'subT': '工作时间:',
@@ -101,7 +101,7 @@ export const contents = [
     "name": "联系我",
     "contents": [
       {
-        'logo': 'http://chuantu.xyz/t6/703/1572956514x3661913030.png',
+        'logo': 'https://i.niupic.com/images/2019/11/10/_59.png',
         'desc': [
             {
               'subT': '电话:',
