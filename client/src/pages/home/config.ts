@@ -114,6 +114,10 @@ export const contents = [
             {
               'subT': '微信:',
               'message': '<img style="width: 100px; height: auto" src="https://i.niupic.com/images/2019/11/05/_5.jpeg">',
+            },
+            {
+              'subT': '长按关注订阅号:',
+              'message': '<img style="width: 100px; height: auto" src="https://i.niupic.com/images/2019/11/11/_6.png">',
             }
         ]
       },

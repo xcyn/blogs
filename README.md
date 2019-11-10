@@ -38,5 +38,7 @@
 - 踩坑记录：
     - 配置mongoose回调不执行问题: <a href="https://blog.csdn.net/moumaobuchiyu/article/details/54884916">总结参考</a>
     - 1、linux root下npm install 需要携带参数 --unsafe-perm 2、linux下安装g++模块yum install gcc gcc-c++
+    - 杀nohup进程、lsof -i:3099、kill -9 16092
+
     
 
