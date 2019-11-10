@@ -8,8 +8,8 @@ var home = require('./controller/home/router')
 var personal = require('./controller/personal/router')
 // 微信
 var weixin = require('./controller/weixin/router')
-// 微信接口配置信息
-appRouter.use('/', weixin)
+// 微信接口
+appRouter.use(weixin)
 // appRouter.use('/home', home)
 appRouter.use('/personal', personal)
 

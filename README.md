@@ -16,6 +16,7 @@
     - serve
     - 使用Typescript和Koa构建Node应用：<a href="https://www.jianshu.com/p/1a91f36e5153">总结参考</a>
     - tslint配置：<a href="https://mssn.midea.com/ask/?/article/244">总结参考</a>
+    - 忽略ts报错: <a href="https://www.cnblogs.com/samxiong/p/11375058.html">总结参考</a>
     - pm2配置：<a href="https://www.jianshu.com/p/70ced477e5bd">总结参考</a>
     - linux下安装pm2：<a href="https://my.oschina.net/u/2252639/blog/1798667">总结参考</a>
     - 日志配置: <a href="https://github.com/log4js-node/log4js-node">总结参考</a>

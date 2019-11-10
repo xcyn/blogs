@@ -46,5 +46,11 @@
       ]
     },
     "db": "personal"
+  },
+  "weixin": {
+    "appid": "wx24f6556604160baf",
+    "secret": "076e654afbdf62d10e7515ef37b6ddce",
+    "expiresIn": "7200",
+    "token": "weixin"
   }
 }
