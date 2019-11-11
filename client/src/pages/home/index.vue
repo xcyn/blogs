@@ -175,8 +175,8 @@ export default class Guide extends VueComponent<{}> {
     }
     async mounted() {
       await wxShare({
-        title: '我的博客',
-        desc: '个人介绍及个人履历',
+        title: '欢迎打扰',
+        desc: '努力为社会创造一点点价值',
         imgUrl: 'https://i.niupic.com/images/2019/11/05/_4.jpeg'
       })
       this.getMessageList()
