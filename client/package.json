@@ -5,7 +5,7 @@
   "author": "xiongchuanyu",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build && node ./build.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -39,6 +39,7 @@
     "css-loader": "^3.2.0",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "shelljs": "^0.8.3",
     "style-loader": "^1.0.0",
     "stylus": "^0.54.7",
     "stylus-loader": "^3.0.2",

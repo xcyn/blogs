@@ -37,6 +37,7 @@
     - 域名解析: <a href="https://jingyan.baidu.com/article/0bc808fc2c6a851bd485b92a.html">总结参考</a>
 - 踩坑记录：
     - 配置mongoose回调不执行问题: <a href="https://blog.csdn.net/moumaobuchiyu/article/details/54884916">总结参考</a>
+    - nginx压缩配置：<a href="https://www.jianshu.com/p/cc61d74104e5">总结参考</a>
     - 1、linux root下npm install 需要携带参数 --unsafe-perm 2、linux下安装g++模块yum install gcc gcc-c++
     - 杀nohup进程、lsof -i:3099、kill -9 16092
 

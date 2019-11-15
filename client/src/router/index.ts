@@ -1,5 +1,6 @@
 import VueRouter from 'vue-router'
 import Vue from 'vue'
+const isDev = process.env.NODE_ENV === "development";
 
 Vue.use(VueRouter)
 
@@ -15,8 +16,8 @@ const defaultPage = {
 }
 
 const router = new VueRouter({
-  // mode: 'history',
-  base: '/',
+  mode: 'history',
+  base: isDev ? '/' : '/blogs',
   routes: [
     {
       path: '/',

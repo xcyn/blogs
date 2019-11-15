@@ -1,7 +1,5 @@
 /* eslint-disable*/
 const path = require('path');
-const routerBase = process.env.VUE_APP_ROUTER_BASE;
-console.log('routerBase', routerBase)
 
 module.exports = {
   productionSourceMap: false,
