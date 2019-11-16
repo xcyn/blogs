@@ -33,17 +33,17 @@ const router = new VueRouter({
     {
       path: '/home',
       name: 'home',
-      component: () => import('@/pages/home/index.vue')
+      component: () => import(/* webpackChunkName: 'home' */'@/pages/home/index.vue')
     },
     {
       path: '/message-history',
       name: 'message-history',
-      component: () => import('@/pages/message-history/index.vue')
+      component: () => import(/* webpackChunkName: 'message-history' */'@/pages/message-history/index.vue')
     },
     {
       path: '/syb-active',
       name: 'syb-active',
-      component: () => import('@/pages/syb-active/index.vue')
+      component: () => import(/* webpackChunkName: 'syb-active' */'@/pages/syb-active/index.vue')
     },
     notFound,
     defaultPage
