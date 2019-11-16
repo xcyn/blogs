@@ -9,7 +9,6 @@ const requestInterface = {
   port:String
 }
 const request = function (option: any) {
-  console.log('请求loading...')
 
   let sendUrl = process.env.VUE_APP_BASE_API + option.url
   var params:string = ''
@@ -33,9 +32,7 @@ const request = function (option: any) {
       return response.data
     })
     .catch(err => {
-      console.log('请求失败...')
     }).finally(() => {
-      console.log('toasthide...')
     })
 }
 

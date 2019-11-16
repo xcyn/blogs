@@ -122,10 +122,8 @@ export default class Guide extends VueComponent<{}> {
       layout: 'standard' // classic fresh
     }
     changeHandler(label:String) {
-      console.log('1changed to:', label)
     }
     stickyChangeHandler(current:String) {
-      console.log('1sticky-change', current)
     }
     async getMessageList() {
       const res = await request({

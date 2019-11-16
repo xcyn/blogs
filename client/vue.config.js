@@ -1,6 +1,7 @@
 /* eslint-disable*/
 const path = require('path');
 const  UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const isPro =  process.env.NODE_ENV === 'production'
 
 module.exports = {
   productionSourceMap: false,
@@ -23,10 +24,29 @@ module.exports = {
         '@': path.resolve('src'),
       },
     },
-    devtool: process.env.NODE_ENV !== 'production' && 'source-map' 
+    plugins: isPro && [
+      new UglifyJsPlugin({
+        uglifyOptions: {
+          compress: {
+            // warnings: false,
+            drop_debugger: true,
+            drop_console: true,
+          },
+        },
+        sourceMap: false,
+        parallel: true,
+      })
+    ] || [],
+    devtool: !isPro && 'source-map' 
   },
 
   chainWebpack: (config) => {
+    if (process.env.NODE_ENV === 'production') {
+      config.externals({
+        vue: 'Vue',
+        'vue-router': 'VueRouter'
+      });
+    }
     // 官网相关配置
     config.module
       .rule('ts')

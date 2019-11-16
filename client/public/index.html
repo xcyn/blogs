@@ -15,6 +15,10 @@
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    <% if(process.env.NODE_ENV == 'production') { %>
+      <script src="https://cdn.bootcss.com/vue/2.6.10/vue.runtime.js"></script>
+      <script src="https://cdn.bootcss.com/vue-router/3.0.2/vue-router.min.js"></script>
+      <% } %>
   </body>
   <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 </html>
