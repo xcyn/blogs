@@ -1,5 +1,6 @@
 node_modules
 /dist
+/blogs
 /servers/dist
 /servers/package-lock.json
 /client/package-lock.json
