@@ -6,7 +6,7 @@
     - 前端和后台模板：Vue.js
     - 数据库：MongoDB
     - 部署：pm2
-    - 完整包含技术：Node.js, typeScript, Koa2, MongoDB, Mongoose, Vue.js, pm2
+    - 完整包含技术：Node.js, typeScript, Koa2, MongoDB, Mongoose, Vue.js, pm2, jenkins
 - 博客地址: <a href="http://lovebhs.xyz">地址</a>
 - 自己搭建的jenkins地址：<a href="http://lovebhs.xyz:8080">地址</a>
 - 参考资料：
@@ -42,6 +42,7 @@
     - 优化
     - vue项目体积优化: <a href="https://www.jianshu.com/p/d1fb954f5713?utm_source=oschina-app">总结参考</a>
     - 自己的jenkins部署总结: <a href="https://www.jianshu.com/p/9049efacdbdb">总结参考</a>
+    - jenkins中npm install 导致jenkins内存不足解决方案: <a href="https://www.jianshu.com/p/fa32b82b652e">总结参考</a>
 - 踩坑记录：
     - 配置mongoose回调不执行问题: <a href="https://blog.csdn.net/moumaobuchiyu/article/details/54884916">总结参考</a>
     - nginx压缩配置：<a href="https://www.jianshu.com/p/cc61d74104e5">总结参考</a>
@@ -50,6 +51,7 @@
     - 查看端口情况: netstat -nultp 查看jenkins状态：systemctl status jenkins， 查看配置：vim /etc/sysconfig/jenkins
     - java版本安装必须1.8以上
     - jenkins密码目录：vim /var/lib/jenkins/secrets/initialAdminPassword
+    - 磁盘情况：df -hl 
 
     
 
