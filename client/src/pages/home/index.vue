@@ -178,7 +178,6 @@ export default class Guide extends VueComponent<{}> {
         imgUrl: 'https://i.niupic.com/images/2019/11/05/_4.jpeg'
       })
       this.getMessageList()
-      alert('test: jenkins自动化部署')
     }
 }
 </script>
