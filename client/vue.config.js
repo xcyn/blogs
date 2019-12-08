@@ -1,4 +1,5 @@
 /* eslint-disable*/
+const SkeletonWebpackPlugin = require('vue-skeleton-webpack-plugin')
 const path = require('path');
 const  UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const isPro =  process.env.NODE_ENV === 'production'
@@ -13,7 +14,8 @@ module.exports = {
         'resolve url': true,
         'import': []
       }
-    }
+    },
+    extract: true
   },
 
   configureWebpack: {
@@ -36,7 +38,26 @@ module.exports = {
         sourceMap: false,
         parallel: true,
       })
-    ] || [],
+    ] || [
+      new SkeletonWebpackPlugin({
+          webpackConfig: {
+              entry: {
+                  app: path.resolve('./src/skeleton/index.js')
+              }
+          },
+          minimize: true,
+          router: {
+            mode: 'history',
+            routes: [
+              { path: '', skeletonId: 'homeSkeleton' },
+              { path: '/', skeletonId: 'homeSkeleton' },
+              { path: '/home', skeletonId: 'homeSkeleton' },
+              { path: '/message-history', skeletonId: 'messageHistory' },
+              { path: '/test-skeleton', skeletonId: 'testSkeletonSkeleton' }
+            ]
+          }
+      })
+    ],
     devtool: !isPro && 'source-map' 
   },
 

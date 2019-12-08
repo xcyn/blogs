@@ -24,6 +24,7 @@
     "vue-class-component": "^7.1.0",
     "vue-property-decorator": "^8.1.1",
     "vue-router": "^3.0.2",
+    "vue-skeleton-webpack-plugin": "^1.2.2",
     "vue-tsx-support": "^2.3.0"
   },
   "devDependencies": {

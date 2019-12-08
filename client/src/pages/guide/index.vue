@@ -228,7 +228,7 @@ export default class Guide extends VueComponent<{}> {
 }
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
 .photo-guide
     width 100px
     height 100px

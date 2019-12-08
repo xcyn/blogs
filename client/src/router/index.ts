@@ -45,6 +45,11 @@ const router = new VueRouter({
       name: 'syb-active',
       component: () => import(/* webpackChunkName: 'syb-active' */'@/pages/syb-active/index.vue')
     },
+    {
+      path: '/test-skeleton',
+      name: 'test-skeleton',
+      component: () => import(/* webpackChunkName: 'test-skeleton' */'@/pages/test-skeleton/index.vue')
+    },
     notFound,
     defaultPage
   ]

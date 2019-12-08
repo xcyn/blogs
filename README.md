@@ -43,6 +43,8 @@
     - vue项目体积优化: <a href="https://www.jianshu.com/p/d1fb954f5713?utm_source=oschina-app">总结参考</a>
     - 自己的jenkins部署总结: <a href="https://www.jianshu.com/p/9049efacdbdb">总结参考</a>
     - jenkins中npm install 导致jenkins内存不足解决方案: <a href="https://www.jianshu.com/p/fa32b82b652e">总结参考</a>
+    - 体验优化-> 骨架屏：<a href="https://www.jianshu.com/p/eacac700630e">总结参考</a>
+    - 体验优化-> 骨架屏多路由配置：<a href="https://github.com/lavas-project/vue-skeleton-webpack-plugin/issues/83">总结参考</a>
 - 踩坑记录：
     - 配置mongoose回调不执行问题: <a href="https://blog.csdn.net/moumaobuchiyu/article/details/54884916">总结参考</a>
     - nginx压缩配置：<a href="https://www.jianshu.com/p/cc61d74104e5">总结参考</a>
