@@ -15,7 +15,7 @@ export const contents = [
           },
           {
             'subT': 'github:',
-            'message': '<a style="color: #fc9153" href="https://github.com/xcyn/blogs">个人博客</a>'
+            'message': '<a style="color: #fc9153" href="https://github.com/xcyn/blogs">个人博客</a><a style="color: red; padding-left: 15px" href="https://github.com/xcyn/cute-baby-plan">分享项目</a>'
           },
           {
             'subT': '工作年限:',
