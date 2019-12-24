@@ -130,20 +130,16 @@ export const contents = [
         'logo': 'https://i.niupic.com/images/2019/11/05/_1738.png',
         'desc': [
             {
-              'subT': '技术:',
-              'message': '<a style="color:red" href="https://tech.meituan.com">美团技术</a>',
+              'subT': '活动页分享:',
+              'message': '<a style="color:red" href="http://lovebhs.xyz/activity">萌宝计划</a>',
             },
             {
-              'subT': '前端:',
-              'message': '<a style="color:red" href="https://www.jianshu.com/p/6fa389409845">前端早读课</a>',
+              'subT': '网站备案主体:',
+              'message': '主体: 熊川宇',
             },
             {
-              'subT': '体育推荐:',
-              'message': '<a style="color:red" href="https://xw.qq.com/m/sports/index.htm">腾讯体育</a>',
-            },
-            {
-              'subT': '爬虫文章:',
-              'message': '<a style="color:red" onclick=alert("功能还未开发,尽情期待")>文章推荐</a>',
+              'subT': '网站备案号:',
+              'message': '备案号: 京ICP备19049633',
             },
         ]
       },
