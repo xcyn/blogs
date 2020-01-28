@@ -1,11 +1,13 @@
 <template>
-  <div class="messageHistorySkt">
-    <skeleton-loading>
-        <square-skeleton class="title">
-        </square-skeleton>
-        <square-skeleton class="messge" :key="n" v-for="n in 5">
-        </square-skeleton>
-    </skeleton-loading>
+  <div>
+    <div class="messageHistorySkt">
+      <skeleton-loading>
+          <square-skeleton class="title">
+          </square-skeleton>
+          <square-skeleton class="messge" :key="n" v-for="n in 5">
+          </square-skeleton>
+      </skeleton-loading>
+    </div>
   </div>
 </template>
 <script>

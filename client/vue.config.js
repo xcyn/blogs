@@ -46,6 +46,7 @@ module.exports = {
               }
           },
           minimize: true,
+          insertAfter: '<div id="skeleton-app">',
           router: {
             mode: 'history',
             routes: [
