@@ -36,7 +36,9 @@
   <script>
     window.onload = function() {
       var skeletonApp = document.querySelector('#skeleton-app')
-      document.body.removeChild(skeletonApp)
+      if(skeletonApp) {
+        document.body.removeChild(skeletonApp)
+      }
     }
   </script>
 </html>

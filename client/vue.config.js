@@ -37,6 +37,25 @@ module.exports = {
         },
         sourceMap: false,
         parallel: true,
+      }),
+      new SkeletonWebpackPlugin({
+        webpackConfig: {
+            entry: {
+                app: path.resolve('./src/skeleton/index.js')
+            }
+        },
+        minimize: true,
+        insertAfter: '<div id="skeleton-app">',
+        router: {
+          mode: 'history',
+          routes: [
+            { path: '', skeletonId: 'homeSkeleton' },
+            { path: '/', skeletonId: 'homeSkeleton' },
+            { path: '/home', skeletonId: 'homeSkeleton' },
+            { path: '/message-history', skeletonId: 'messageHistory' },
+            { path: '/test-skeleton', skeletonId: 'testSkeletonSkeleton' }
+          ]
+        }
       })
     ] || [
       new SkeletonWebpackPlugin({
