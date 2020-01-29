@@ -50,10 +50,10 @@ module.exports = {
           mode: 'history',
           routes: [
             { path: '', skeletonId: 'homeSkeleton' },
-            { path: '/', skeletonId: 'homeSkeleton' },
-            { path: '/home', skeletonId: 'homeSkeleton' },
-            { path: '/message-history', skeletonId: 'messageHistory' },
-            { path: '/test-skeleton', skeletonId: 'testSkeletonSkeleton' }
+            { path: '/blogs', skeletonId: 'homeSkeleton' },
+            { path: '/blogs/home', skeletonId: 'homeSkeleton' },
+            { path: '/blogs/message-history', skeletonId: 'messageHistory' },
+            { path: '/blogs/test-skeleton', skeletonId: 'testSkeletonSkeleton' }
           ]
         }
       })
