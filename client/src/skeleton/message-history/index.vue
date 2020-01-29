@@ -1,11 +1,15 @@
 <template>
-  <div>
+  <div class="skt-c">
     <div class="messageHistorySkt">
       <skeleton-loading>
-          <square-skeleton class="title">
-          </square-skeleton>
-          <square-skeleton class="messge" :key="n" v-for="n in 5">
-          </square-skeleton>
+          <div class="skt-title">
+            <square-skeleton class="title">
+            </square-skeleton>
+          </div>
+          <div class="skeleton" :key="n" v-for="n in 6">
+            <square-skeleton class="messge">
+            </square-skeleton>
+          </div>
       </skeleton-loading>
     </div>
   </div>
@@ -19,14 +23,19 @@ export default {
 };
 </script>
 <style lang="stylus" scoped>
-.messageHistorySkt
-  padding 20px
-.title
-  margin 10px 0
-.title >>> div
-  height 16px
-.messge
+.skt-c
+  width 100%
+.skt-title
   padding 20px 15px
+  padding-bottom 10px
+.title
+  margin 5px 0
+  margin-bottom 0
+.title >>> div
+  height 30px
+.skeleton
+  padding 5px 15px
 .messge >>> div
-    height 99px
+  width 100%
+  height 99px
 </style>
