@@ -47,6 +47,14 @@
     },
     "db": "personal"
   },
+  "redis_dev": {
+    "port": "6379",
+    "host": "127.0.0.1"
+  },
+  "redis": {
+    "host": "49.233.77.39",
+    "port": "127.0.0.1"
+  },
   "weixin": {
     "appid": "wx24f6556604160baf",
     "secret": "076e654afbdf62d10e7515ef37b6ddce",

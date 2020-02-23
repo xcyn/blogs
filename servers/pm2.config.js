@@ -16,4 +16,4 @@ module.exports = {
             max_memory_restart: '300M'
         }
     ]
-};
+}
