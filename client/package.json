@@ -6,7 +6,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build && node ./build.js",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "analyz": "NODE_ENV=production npm_config_report=true npm run build"
   },
   "dependencies": {
     "@tweenjs/tween.js": "^18.3.1",

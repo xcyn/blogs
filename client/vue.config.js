@@ -3,6 +3,7 @@ const SkeletonWebpackPlugin = require('vue-skeleton-webpack-plugin')
 const path = require('path');
 const  UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const isPro =  process.env.NODE_ENV === 'production'
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 module.exports = {
   productionSourceMap: false,
@@ -38,6 +39,7 @@ module.exports = {
         sourceMap: false,
         parallel: true,
       }),
+      new BundleAnalyzerPlugin(),
       new SkeletonWebpackPlugin({
         webpackConfig: {
             entry: {
