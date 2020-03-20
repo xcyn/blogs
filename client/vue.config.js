@@ -39,7 +39,7 @@ module.exports = {
         sourceMap: false,
         parallel: true,
       }),
-      new BundleAnalyzerPlugin(),
+      // new BundleAnalyzerPlugin(),
       new SkeletonWebpackPlugin({
         webpackConfig: {
             entry: {
