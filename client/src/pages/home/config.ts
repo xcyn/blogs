@@ -131,7 +131,7 @@ export const contents = [
         'desc': [
             {
               'subT': 'webpack学习整理:',
-              'message': '<a style="color:red" href="http://lovebhs.xyz/activity">webpack学习整理</a>',
+              'message': '<a style="color:red" href="https://github.com/xcyn/webpack-study">webpack学习整理</a>',
             },
             {
               'subT': '网站备案主体:',
