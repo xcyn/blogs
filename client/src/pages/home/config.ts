@@ -130,8 +130,8 @@ export const contents = [
         'logo': 'https://i.niupic.com/images/2019/11/05/_1738.png',
         'desc': [
             {
-              'subT': '活动页分享:',
-              'message': '<a style="color:red" href="http://lovebhs.xyz/activity">萌宝计划</a>',
+              'subT': 'webpack学习整理:',
+              'message': '<a style="color:red" href="http://lovebhs.xyz/activity">webpack学习整理</a>',
             },
             {
               'subT': '网站备案主体:',
