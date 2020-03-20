@@ -24,20 +24,20 @@ const router = new VueRouter({
       name: 'home',
       redirect: 'home'
     },
-    // 炫酷引导页
-    // {
-    //   path: '/guide',
-    //   name: 'guide',
-    //   component: () => import('@/pages/guide/index.vue')
-    // },
     {
       path: '/home',
       name: 'home',
+      meta: {
+        level: 1
+      },
       component: () => import(/* webpackChunkName: 'home' */'@/pages/home/index.vue')
     },
     {
       path: '/message-history',
       name: 'message-history',
+      meta: {
+        level: 2
+      },
       component: () => import(/* webpackChunkName: 'message-history' */'@/pages/message-history/index.vue')
     },
     {
