@@ -55,4 +55,12 @@ const router = new VueRouter({
   ]
 })
 
+router.afterEach(() => {
+  // 路由完毕关闭骨架屏幕，之前用window.onload会有bug，如果页面中有资源没有加载出来会一直阻塞渲染
+  var skeletonApp = document.querySelector('#skeleton-app')
+  if(skeletonApp) {
+    document.body.removeChild(skeletonApp)
+  }
+})
+
 export default router
