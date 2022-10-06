@@ -140,13 +140,7 @@ export default class Guide extends VueComponent<{}> {
     layout: "standard", // classic fresh
   };
   changeHandler(label: String) {}
-  stickyChangeHandler(current: String) {
-    if (!current) {
-      console.log("11111");
-      document.querySelector(".cube-sticky-fixed").style.display = "block";
-    }
-    console.log("sticky-change", current);
-  }
+  stickyChangeHandler(current: String) {}
   async getMessageList() {
     const res = await request({
       url: "/personal/message/get",
