@@ -15,11 +15,11 @@ export const contents = [
           },
           {
             'subT': 'github:',
-            'message': '<a style="color: #fc9153" href="https://github.com/xcyn/blogs">个人博客</a><a style="color: red; padding-left: 15px" href="https://github.com/xcyn/cute-baby-plan">分享项目</a>'
+            'message': '<a style="color: red; " href="https://github.com/xcyn/Website-tool">低代码平台</a><a style="color: #fc9153; padding-left: 15px" href="https://github.com/xcyn/blogs">个人博客</a>'
           },
           {
             'subT': '工作年限:',
-            'message': '3.5',
+            'message': '6年',
           },
           {
             'subT': '个人介绍:',
@@ -33,11 +33,32 @@ export const contents = [
     "name": "我的履历",
     "contents": [
       {
+        'logo': 'https://i.niupic.com/images/2022/10/06/a6c7.jpg        ',
+        'desc': [
+          {
+            'subT': '工作时间:',
+            'message': '2020-至今',
+          },
+          {
+            'subT': '技术栈:',
+            'message': 'electron',
+          },
+          {
+            'subT': '经历:',
+            'message': '爱奇艺资深前端，负责爱奇艺协同办公软件开发，jssdk，服务监控，h5, 管理后台',
+          },
+          {
+            'subT': '工作:',
+            'message': '啥都干点，不加班，生活和开发平衡',
+          }
+        ]
+      },
+      {
         'logo': 'https://i.niupic.com/images/2019/11/10/_58.png',
         'desc': [
           {
             'subT': '工作时间:',
-            'message': '2019-至今',
+            'message': '2019-2020',
           },
           {
             'subT': '技术栈:',
@@ -103,22 +124,22 @@ export const contents = [
       {
         'logo': 'https://i.niupic.com/images/2019/11/10/_59.png',
         'desc': [
-            {
-              'subT': '电话:',
-              'message': '<a href="tel:18811742305">18811742305</a>',
-            },
-            {
-              'subT': '邮箱:',
-              'message': '<a href="mailto:18811742305@163.com?subject=I Want You&body=你好，川宇!">18811742305@163.com</a>',
-            },
-            {
-              'subT': '微信:',
-              'message': '<img style="width: 100px; height: auto" src="https://i.niupic.com/images/2019/11/05/_5.jpeg">',
-            },
-            {
-              'subT': '长按关注订阅号:',
-              'message': '<img style="width: 100px; height: auto" src="https://i.niupic.com/images/2019/11/11/_6.png">',
-            }
+          {
+            'subT': '电话:',
+            'message': '<a href="tel:18811742305">18811742305</a>',
+          },
+          {
+            'subT': '邮箱:',
+            'message': '<a href="mailto:18811742305@163.com?subject=I Want You&body=你好，川宇!">18811742305@163.com</a>',
+          },
+          {
+            'subT': '微信:',
+            'message': '<img style="width: 100px; height: auto" src="https://i.niupic.com/images/2019/11/05/_5.jpeg">',
+          },
+          {
+            'subT': '长按关注飞熊网服务号:',
+            'message': '<img style="width: 100px; height: auto" src="https://i.niupic.com/images/2022/10/06/a6c5.jpg">',
+          }
         ]
       },
     ]
@@ -129,18 +150,18 @@ export const contents = [
       {
         'logo': 'https://i.niupic.com/images/2019/11/05/_1738.png',
         'desc': [
-            {
-              'subT': 'webpack学习整理:',
-              'message': '<a style="color:red" href="https://github.com/xcyn/webpack-study">webpack学习整理</a>',
-            },
-            {
-              'subT': '网站备案主体:',
-              'message': '主体: 熊川宇',
-            },
-            {
-              'subT': '网站备案号:',
-              'message': '备案号: 京ICP备19049633',
-            },
+          {
+            'subT': 'webpack学习整理:',
+            'message': '<a style="color:red" href="https://github.com/xcyn/webpack-study">webpack学习整理</a>',
+          },
+          {
+            'subT': '网站备案主体:',
+            'message': '主体: 熊川宇',
+          },
+          {
+            'subT': '网站备案号:',
+            'message': '备案号: 京ICP备19049633',
+          },
         ]
       },
     ]
